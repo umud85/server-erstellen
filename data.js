@@ -1,7 +1,3 @@
-module.exports = {
-    getGerichte: () => gerichte,
-}
-
 const gerichte = [
     {
         name: 'Roter Heringsalat',
@@ -66,3 +62,7 @@ const gerichte = [
         ],
     }
 ];
+
+export const getGerichte = () => {
+    return gerichte;
+}

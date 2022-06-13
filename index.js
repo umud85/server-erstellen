@@ -1,11 +1,11 @@
-const http = require('http');
-const { getGerichte } = require('./data');
+import { createServer } from 'http';
+import { getGerichte } from './data.js';
 
 const port = process.env.PORT || 3001;
 
 const data = JSON.stringify(getGerichte());
 
-const server = http.createServer((req, res) => {
+const server = createServer((req, res) => {
     res.setHeader('Content-Type', 'application/json');
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.writeHead(200);
